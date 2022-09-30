@@ -1,7 +1,6 @@
 import { BrowserRouter, Route, Routes, Outlet } from 'react-router-dom'
 import { PrivatePages } from '@components'
-import { AuthPage, BooksPage, HomePage } from '@pages'
-
+import { AuthPage, BooksPage, HomePage, NotesPage, SettingsPage } from '@pages'
 const Router = () => {
   return (
     <BrowserRouter>
@@ -10,6 +9,8 @@ const Router = () => {
         <Route path="/" element={<PrivatePages/>}>
           <Route path="home" element={<HomePage />} />
           <Route path="books" element={<BooksPage />} />
+          <Route path="notes" element={<NotesPage />} />
+          <Route path="settings" element={<SettingsPage />} />
         </Route>
 
         {/* AUTH ROUTES */}

@@ -25,6 +25,7 @@ module.exports = {
     'no-undef': 'off',
     quotes: ['error', 'single'],
     semi: ['error', 'never'],
-    'no-tabs': 'off'
+    'no-tabs': 'off',
+    'no-mixed-spaces-and-tabs': 'off'
   }
 }

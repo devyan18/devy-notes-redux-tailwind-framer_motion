@@ -1,47 +1,14 @@
 import { Layout } from '@components'
+import { Link } from 'react-router-dom'
 
 export interface HomePageInterface {}
 
 const HomePage : React.FC<HomePageInterface> = () => {
   return (
     <Layout>
-			<p>home page</p>
-			<p>home page</p>
-			<p>home page</p>
-			<p>home page</p>
-			<p>home page</p>
-			<p>home page</p>
-			<p>home page</p>
-			<p>home page</p>
-			<p>home page</p>
-			<p>home page</p>
-			<p>home page</p>
-			<p>home page</p>
-			<p>home page</p>
-			<p>home page</p>
-			<p>home page</p>
-			<p>home page</p>
-			<p>home page</p>
-			<p>home page</p>
-			<p>home page</p>
-			<p>home page</p>
-			<p>home page</p>
-			<p>home page</p>
-			<p>home page</p>
-			<p>home page</p>
-			<p>home page</p>
-			<p>home page</p>
-			<p>home page</p>
-			<p>home page</p>
-			<p>home page</p>
-			<p>home page</p>
-			<p>home page</p>
-			<p>home page</p>
-			<p>home page</p>
-			<p>home page</p>
-			<p>home page</p>
-			<p>home page</p>
-			<p>home page</p>
+			<Link to="/books">
+				<p>Ir a los libros</p>
+			</Link>
     </Layout>
   )
 }

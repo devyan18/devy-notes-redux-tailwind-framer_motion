@@ -4,8 +4,11 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from 'react'
 
 import { getTheme } from './app/data/theme'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 
 export default function App () {
+  const queryClient = new QueryClient()
+
   const dispatch = useDispatch()
 
   const ThemeState = useSelector((state: RootState) => state.theme)
@@ -23,6 +26,8 @@ export default function App () {
   }, [ThemeState.theme])
 
   return (
-    <Router />
+    <QueryClientProvider client={queryClient}>
+      <Router />
+    </QueryClientProvider>
   )
 }

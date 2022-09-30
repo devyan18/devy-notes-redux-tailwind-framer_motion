@@ -3,7 +3,7 @@ import { setTokenToLocalStorage } from '@utils/session'
 import { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-import useLogin from './hooks/useLogin'
+import useLogin from '../../hooks/useLogin'
 
 export interface AuthPageInterface {}
 
