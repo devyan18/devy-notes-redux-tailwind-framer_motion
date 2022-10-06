@@ -20,15 +20,21 @@ const BooksPage : React.FC<BooksPageInterface> = () => {
 					<p>Loading...</p>
 				    )
 				  : (
-				  books?.map((book) => (
-						<BookCard
-							key={book._id}
-							describe={book.describe}
-							name={book.name}
-							notes={book.notes.length}
-							update={book.updatedAt}
-						/>
-				  ))
+				      books && books?.length > 0
+				        ? (
+				        books?.map((book) => (
+									<BookCard
+										key={book._id}
+										describe={book.describe}
+										name={book.name}
+										notes={book.notes.length}
+										update={book.updatedAt}
+									/>
+				        ))
+				      )
+				        : (
+							<p>No books</p>
+				      )
 				    )}
 			</div>
 		</Layout>

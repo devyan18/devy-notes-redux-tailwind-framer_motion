@@ -10,7 +10,7 @@ const NavbarLink : React.FC<NavbarLinkInterface> = (props: NavbarLinkInterface) 
   return (
 		<NavLink
 			className={({ isActive }) => {
-			  return `${isActive ? 'text-blue-400' : 'hover:text-blue-400 text-gray-200'}`
+			  return `${isActive ? 'text-blue-400' : 'hover:text-blue-400 text-gray-500'}`
 			}}
 			to={props.to}>
 				<span className='flex sm:hidden text-2xl'>
