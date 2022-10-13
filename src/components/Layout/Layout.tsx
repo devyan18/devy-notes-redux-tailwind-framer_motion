@@ -1,4 +1,4 @@
-import { Navbar } from '@components'
+import { Navbar } from "@components";
 
 export interface LayoutInterface {
 	children: React.ReactNode
@@ -12,7 +12,7 @@ const Layout : React.FC<LayoutInterface> = (props: LayoutInterface) => {
 				{props.children}
 			</main>
 		</div>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

@@ -1,6 +1,6 @@
-import { BrowserRouter, Route, Routes, Outlet } from 'react-router-dom'
-import { PrivatePages } from '@components'
-import { AuthPage, BooksPage, HomePage, NotesPage, SettingsPage } from '@pages'
+import { BrowserRouter, Route, Routes, Outlet } from "react-router-dom";
+import { PrivatePages } from "@components";
+import { AuthPage, BooksPage, HomePage, NotesPage, SettingsPage } from "@pages";
 const Router = () => {
   return (
     <BrowserRouter>
@@ -24,7 +24,7 @@ const Router = () => {
 
       </Routes>
     </BrowserRouter>
-  )
-}
+  );
+};
 
-export default Router
+export default Router;

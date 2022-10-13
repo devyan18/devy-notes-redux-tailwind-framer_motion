@@ -1,1 +1,1 @@
-export { default as PrivatePages } from './PrivatePages'
+export { default as PrivatePages } from "./PrivatePages";

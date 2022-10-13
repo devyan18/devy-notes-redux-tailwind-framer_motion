@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom'
+import { NavLink } from "react-router-dom";
 
 export interface NavbarLinkInterface {
 	children: React.ReactNode
@@ -10,7 +10,7 @@ const NavbarLink : React.FC<NavbarLinkInterface> = (props: NavbarLinkInterface) 
   return (
 		<NavLink
 			className={({ isActive }) => {
-			  return `${isActive ? 'text-blue-400' : 'hover:text-blue-400 text-gray-500'}`
+			  return `${isActive ? "text-blue-400" : "hover:text-blue-400 text-gray-500"}`;
 			}}
 			to={props.to}>
 				<span className='flex sm:hidden text-2xl'>
@@ -21,7 +21,7 @@ const NavbarLink : React.FC<NavbarLinkInterface> = (props: NavbarLinkInterface) 
 				<span>{props.title}</span>
 			</p>
 		</NavLink>
-  )
-}
+  );
+};
 
-export default NavbarLink
+export default NavbarLink;

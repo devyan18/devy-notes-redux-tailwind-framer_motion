@@ -1,4 +1,4 @@
-import { Layout } from '@components'
+import { Layout } from "@components";
 
 export interface SettingsPageInterface {}
 
@@ -7,7 +7,7 @@ const SettingsPage : React.FC<SettingsPageInterface> = () => {
     <Layout>
       <h1>Settings</h1>
     </Layout>
-  )
-}
+  );
+};
 
-export default SettingsPage
+export default SettingsPage;

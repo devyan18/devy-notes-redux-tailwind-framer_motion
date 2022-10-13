@@ -1,7 +1,9 @@
-export default interface UserModel {
+interface UserModel {
   username: string
   email: string
-  sexo: 'male' | 'female'
+  sexo: "male" | "female"
   premium: boolean
   isActive: boolean
 }
+
+export default UserModel;

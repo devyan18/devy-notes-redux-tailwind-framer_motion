@@ -1,4 +1,4 @@
-import NoteModel from './NoteModel'
+import NoteModel from "./NoteModel";
 
 interface BookModel {
   _id: string,
@@ -9,4 +9,4 @@ interface BookModel {
   updatedAt: string
 }
 
-export default BookModel
+export default BookModel;

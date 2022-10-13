@@ -1,4 +1,4 @@
-import { Layout } from '@components'
+import { Layout } from "@components";
 
 export interface HomePageInterface {}
 
@@ -38,7 +38,7 @@ const HomePage : React.FC<HomePageInterface> = () => {
       <p>HOla mundo</p>
       <p>HOla mundo</p>
     </Layout>
-  )
-}
+  );
+};
 
-export default HomePage
+export default HomePage;

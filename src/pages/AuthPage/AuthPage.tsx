@@ -1,34 +1,34 @@
-import { getAuthToken, getAuthUser } from '@store/data/auth'
-import { setTokenToLocalStorage } from '@utils/session'
-import { useEffect } from 'react'
-import { useDispatch } from 'react-redux'
-import { useNavigate } from 'react-router-dom'
-import useLogin from '../../hooks/useLogin'
+import { getAuthToken, getAuthUser } from "@store/data/auth";
+import { setTokenToLocalStorage } from "@utils/session";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import useLogin from "../../hooks/useLogin";
 
 export interface AuthPageInterface {}
 
 const AuthPage : React.FC<AuthPageInterface> = () => {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
-  const { isLoading, response, setParam, submit } = useLogin()
+  const { isLoading, response, setParam, submit } = useLogin();
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault()
-    submit()
-  }
+    event.preventDefault();
+    submit();
+  };
 
   useEffect(() => {
     if (response) {
-      setTokenToLocalStorage(response.token)
-      dispatch(getAuthToken())
-      dispatch(getAuthUser(response.user))
-      navigate('/home')
+      setTokenToLocalStorage(response.token);
+      dispatch(getAuthToken());
+      dispatch(getAuthUser(response.user));
+      navigate("/home");
     }
-  }, [response])
+  }, [response]);
 
-  if (isLoading) return <div>Loading...</div>
+  if (isLoading) return <div>Loading...</div>;
 
   return (
 		<div className='grid place-items-center min-h-screen bg-white dark:bg-gray-900 text-black dark:text-white'>
@@ -50,11 +50,11 @@ const AuthPage : React.FC<AuthPageInterface> = () => {
         <button
           type='submit'
           disabled={isLoading}
-        >{isLoading ? 'Loading...' : 'Login'}
+        >{isLoading ? "Loading..." : "Login"}
         </button>
       </form>
 		</div>
-  )
-}
+  );
+};
 
-export default AuthPage
+export default AuthPage;

@@ -3,4 +3,4 @@ interface NoteModel {
   title: string,
 }
 
-export default NoteModel
+export default NoteModel;

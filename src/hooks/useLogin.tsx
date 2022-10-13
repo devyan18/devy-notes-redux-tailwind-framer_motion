@@ -1,5 +1,5 @@
-import { getSessionFromLogin, ResponseLogin } from '@utils/session'
-import { useState } from 'react'
+import { getSessionFromLogin, ResponseLogin } from "@utils/session";
+import { useState } from "react";
 
 interface ILoginForm {
   email: string
@@ -7,36 +7,36 @@ interface ILoginForm {
 }
 
 const initialForm = {
-  email: '',
-  password: ''
-}
+  email: "",
+  password: ""
+};
 
 export default function useLogin () {
-  const [response, setResponse] = useState<ResponseLogin | null>(null)
+  const [response, setResponse] = useState<ResponseLogin | null>(null);
 
-  const [isLoading, setLoading] = useState(false)
+  const [isLoading, setLoading] = useState(false);
 
-  const [form, setForm] = useState<ILoginForm>(initialForm)
+  const [form, setForm] = useState<ILoginForm>(initialForm);
 
   const setParam = (e: React.ChangeEvent<HTMLInputElement>) => {
     setForm({
       ...form,
       [e.target.name]: e.target.value
-    })
-  }
+    });
+  };
 
   const submit = () => {
-    setLoading(true)
+    setLoading(true);
     getSessionFromLogin(form.email, form.password)
       .then(res => {
         if (res) {
-          setResponse(res)
+          setResponse(res);
         } else {
-          setResponse(null)
+          setResponse(null);
         }
       })
-      .finally(() => setLoading(false))
-  }
+      .finally(() => setLoading(false));
+  };
 
-  return { isLoading, submit, setParam, response }
+  return { isLoading, submit, setParam, response };
 }

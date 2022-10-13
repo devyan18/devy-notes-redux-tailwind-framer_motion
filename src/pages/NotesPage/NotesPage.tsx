@@ -1,4 +1,4 @@
-import { Layout } from '@components'
+import { Layout } from "@components";
 
 export interface NotesPageInterface {}
 
@@ -7,7 +7,7 @@ const NotesPage : React.FC<NotesPageInterface> = () => {
     <Layout>
       <h1>Notes</h1>
     </Layout>
-  )
-}
+  );
+};
 
-export default NotesPage
+export default NotesPage;

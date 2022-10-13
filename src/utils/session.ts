@@ -1,44 +1,44 @@
-import UserModel from 'src/models/UserModel'
-import getHost from './getHost'
+import UserModel from "src/models/UserModel";
+import getHost from "./getHost";
 
 export const getTokenFromLocalStorage = (): string | null => {
-  const item = localStorage.getItem('devy-token')
+  const item = localStorage.getItem("devy-token");
 
   if (item) {
-    return item
+    return item;
   }
-  return null
-}
+  return null;
+};
 
 export const setTokenToLocalStorage = (value: string) => {
-  localStorage.setItem('devy-token', value)
-}
+  localStorage.setItem("devy-token", value);
+};
 
 export const removeTokenFromLocalStorage = () => {
-  localStorage.removeItem('devy-token')
-}
+  localStorage.removeItem("devy-token");
+};
 
 export const getUserFromToken = async (token: string): Promise<UserModel | null> => {
   try {
     const request = await fetch(`${getHost()}/auth/token`, {
-      method: 'GET',
+      method: "GET",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
         Authorization: `Bearer ${token}`
       }
-    })
+    });
 
-    const response = await request.json()
+    const response = await request.json();
 
     if (request.status === 200) {
-      return response.user as UserModel
+      return response.user as UserModel;
     } else {
-      return null
+      return null;
     }
   } catch (error) {
-    return null
+    return null;
   }
-}
+};
 
 export interface ResponseLogin {
   token: string
@@ -48,23 +48,23 @@ export interface ResponseLogin {
 export const getSessionFromLogin = async (email: string, password: string): Promise<ResponseLogin | null> => {
   try {
     const request = await fetch(`${getHost()}/auth/login`, {
-      method: 'POST',
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json'
+        "Content-Type": "application/json"
       },
       body: JSON.stringify({
         email,
         password
       })
-    })
-    const response = await request.json()
+    });
+    const response = await request.json();
 
     if (request.status === 203) {
-      return response as ResponseLogin
+      return response as ResponseLogin;
     } else {
-      return null
+      return null;
     }
   } catch (error) {
-    return null
+    return null;
   }
-}
+};

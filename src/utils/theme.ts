@@ -1,12 +1,12 @@
-export const getThemeFromLocalStorage = (): 'light' | 'dark' => {
-  const mode = localStorage.getItem('theme')
-  if (mode === 'dark') {
-    return 'dark'
+export const getThemeFromLocalStorage = (): "light" | "dark" => {
+  const mode = localStorage.getItem("theme");
+  if (mode === "dark") {
+    return "dark";
   } else {
-    return 'light'
+    return "light";
   }
-}
+};
 
 export const setThemeToLocalStorage = (mode: string): void => {
-  localStorage.setItem('theme', mode)
-}
+  localStorage.setItem("theme", mode);
+};

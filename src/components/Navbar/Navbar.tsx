@@ -2,8 +2,8 @@
 // import { removeTokenFromLocalStorage } from '@utils/session'
 // import { useDispatch } from 'react-redux'
 
-import { HiCollection, HiHome, HiCog, HiBookmark } from 'react-icons/hi'
-import { NavbarLink } from '../NavbarLink'
+import { HiCollection, HiHome, HiCog, HiBookmark } from "react-icons/hi";
+import { NavbarLink } from "../NavbarLink";
 
 export interface NavbarInterface {}
 
@@ -25,10 +25,10 @@ const Navbar : React.FC<NavbarInterface> = () => {
 				</NavbarLink>
 			</nav>
 		</div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
 
 // const dispatch = useDispatch()
 

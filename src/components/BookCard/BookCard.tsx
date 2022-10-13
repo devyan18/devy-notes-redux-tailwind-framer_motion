@@ -1,4 +1,4 @@
-import { HiLockClosed } from 'react-icons/hi'
+import { HiLockClosed } from "react-icons/hi";
 
 export interface BookCardInterface {
 	name: string
@@ -17,19 +17,12 @@ const BookCard : React.FC<BookCardInterface> = (props: BookCardInterface) => {
 						Members only
 					</p>
 					<div className="text-gray-900 dark:text-gray-300 font-bold text-xl mb-2">{props.name}</div>
-					<p className="bg-gray-300 text-gray-700 dark:text-gray-500 text-base">{props.describe}</p>
+					<p className="text-gray-700 dark:text-gray-500 text-base">{props.describe}</p>
 				</div>
-				{/* <div className="flex items-center">
-					<img className="w-10 h-10 rounded-full mr-4" src="/img/jonathan.jpg" alt="Avatar of Jonathan Reinink"/>
-					<div className="text-sm">
-					<p className="text-gray-900 leading-none">Jonathan Reinink</p>
-					<p className="text-gray-600">Aug 18</p>
-					</div>
-				</div> */}
 				<span className="inline-block bg-gray-500 dark:bg-gray-900 rounded-xl px-3 py-1 text-sm font-semibold text-white dark:text-gray-700 mr-2 mb-2">#{props.notes} Notes</span>
 			</div>
 		</div>
-  )
-}
+  );
+};
 
-export default BookCard
+export default BookCard;
